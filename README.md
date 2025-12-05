@@ -52,12 +52,6 @@ pip install -r requirements.txt
 
 일반적으로 전처리 스크립트를 먼저 실행하고, 모델별로 학습/예측 스크립트를 실행한 뒤 최종 앙상블 스크립트를 실행합니다. `final_codes_TEAM_CHIDIES/info.md`에 권장 순서가 있습니다.
 
-실행 예시(베이스라인):
-
-```bash
-python final_codes_TEAM_CHIDIES/0_baseline.py
-```
-
 권장 실행 순서(최종 모델 결과 재현):
 
 1. `final_codes_TEAM_CHIDIES/2_1_preprocess_data.py` — 전처리 (데이터 정리/기본 특성 생성)
@@ -75,20 +69,6 @@ python final_codes_TEAM_CHIDIES/0_baseline.py
 - `3_*` — 최근접 이웃 기반 모델(설명: k-NN 스타일)
 - `4_*`, `5_*` — 국소/회귀 IDW 및 트렌드 보정 스텝
 - `6_final_ensemble_model.py` — 위 모델들을 조합한 앙상블
-
-## 재현성 및 팁
-- `requirements.txt`에 있는 패키지 버전이 달라 성능/동작이 달라질 수 있습니다. 필요 시 가상환경 생성 후 패키지 버전을 고정하여 재현하세요.
-- 큰 데이터 파일이나 개인 정보는 절대 커밋하지 마세요. `.gitignore`에는 가상환경과 캐시, 로그 등이 포함되어 있습니다.
-
-## 커밋 & GitHub 사용 가이드
-- 이 레포는 공개 저장소로 만들었습니다. 민감한 데이터(키, 비밀번호, 개인 정보)는 커밋하지 마세요.
-- 프로젝트를 공유/협업하려면 GitHub Issues 또는 Pull Request를 사용하세요.
-
-## 라이선스
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 확인하세요.
-
-## 기여
-- 개선 제안(코드/문서/실험 결과 등)은 언제든지 환영합니다. Pull Request를 보내주세요.
 
 ## 연락 & 참고
 - 작성자: 김수민
